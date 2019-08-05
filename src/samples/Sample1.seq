@@ -1,0 +1,29 @@
+
+// Comments at the beginning are ignored (ask why)
+// Define a starter (here User)
+Item
+A
+@Starter(User)
+// Send a message to object A
+A.methodA() { 
+  // Send a message to itself (A)
+  selfMethod(parameter1, parameter2) 
+  // An alt/condition fragment
+  if (condition1) {
+    // A loop fragment, use 'for', 'forEach' or 'while'
+    forEach(item_in_res) {
+      // Send a message and get the result
+      Type res = Item.doSomething()
+    }
+  } else if (condition2) {  
+    // Create an object [b:B]
+    b = new B(p1, p2)
+    // Call a method on the newly created object 'b:B'
+    b:B.method()
+  } else {
+    // An async call to a different object
+    B->C : Async Message
+    // An async call to the object itself
+    B->B : Self Async
+  }
+}
